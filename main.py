@@ -46,7 +46,7 @@ class YandexDisk:
 if __name__ == '__main__':
     # Получить путь к загружаемому файлу и токен от пользователя
     path_to_file = '/text.txt'
-    token = 'y0_AgAAAAAe3hRxAADLWwAAAADb3f-7-2J1GUwLTXq-d1C_efngqvag3NQ'
+    token = config('token', default='')
     file_name = 'text.txt'
     uploader = YandexDisk(token=token)
     result = uploader.upload_file_to_disk(path_to_file, file_name)
